@@ -62,7 +62,7 @@ const examQuestionsList = [
     question:
       "解下列聯立方程組：$$\\begin{cases} -x - 2y = -13 \\\\ -4x + 2y = 2 \\end{cases}$$",
     option: {
-      a: "$$\\left( \\dfrac{11}{5}, \\dfrac{-27}{5} \\right)$$",
+      a: "$$\\left( \\dfrac{11}{5}, \\dfrac{27}{5} \\right)$$",
       b: "$$\\left( \\dfrac{27}{5}, \\dfrac{11}{5} \\right)$$",
       c: "$$\\left( \\dfrac{-27}{5}, \\dfrac{-11}{5} \\right)$$",
       d: "$$\\left( a, \\dfrac{26 - 2a}{5} \\right), \\text{其中 } a \\text{ 為任意實數}$$",
