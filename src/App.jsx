@@ -21,6 +21,11 @@ export default function App() {
     setShuffledQuestions(shuffleArray(examQuestionsList));
   }, []);
 
+  // Scroll to top when currentPage changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
+
   // Handle checkbox change
   const handleCheckboxChange = (questionId, optionKey) => {
     setSelectedAnswers((prevAnswers) => {
@@ -97,21 +102,25 @@ export default function App() {
               {Object.entries(topic.option).map(([key, value]) => (
                 <label
                   key={key}
-                  className="flex items-center mb-2 cursor-pointer"
+                  className="flex flex-col sm:flex-row sm:items-center mb-2 cursor-pointer"
                 >
-                  <input
-                    type="checkbox"
-                    checked={
-                      selectedAnswers[topic.id] &&
-                      selectedAnswers[topic.id].includes(key)
-                    }
-                    onChange={() => handleCheckboxChange(topic.id, key)}
-                    className="form-checkbox h-5 w-5 text-blue-600"
-                  />
-                  <span className="ml-2 font-medium text-gray-700">
-                    {key.toUpperCase()}：
-                  </span>
-                  <MathJax className="ml-2 text-gray-700">{value}</MathJax>
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={
+                        selectedAnswers[topic.id] &&
+                        selectedAnswers[topic.id].includes(key)
+                      }
+                      onChange={() => handleCheckboxChange(topic.id, key)}
+                      className="form-checkbox h-5 w-5 text-blue-600"
+                    />
+                    <span className="ml-2 font-medium text-gray-700">
+                      {key.toUpperCase()}：
+                    </span>
+                  </div>
+                  <div className="ml-7 text-gray-700 break-words">
+                    <MathJax>{value}</MathJax>
+                  </div>
                 </label>
               ))}
             </div>
