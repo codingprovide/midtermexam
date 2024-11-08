@@ -170,12 +170,12 @@ const examQuestionsList = [
     question:
       "給定矩陣 $$A = \\begin{bmatrix} 2 & -2 \\\\ 5 & 6 \\\\ 0 & -3 \\end{bmatrix}$$，計算 $$A^T A$$。",
     option: {
-      a: "$$A^T A = \\begin{bmatrix} 29 & -26 \\\\ -26 & 49 \\end{bmatrix}$$",
+      a: "$$A^T A = \\begin{bmatrix} 29 & -26 \\\\ 34 & 49 \\end{bmatrix}$$",
       b: "$$A^T A = \\begin{bmatrix} 29 & 26 \\\\ -34 & 49 \\end{bmatrix}$$",
       c: "$$A^T A = \\begin{bmatrix} 34 & 29 \\\\ 49 & -26 \\end{bmatrix}$$",
-      d: "$$A^T A = \\begin{bmatrix} 29 & -26 \\\\ -26 & 49 \\end{bmatrix}$$",
+      d: "$$A^T A = \\begin{bmatrix} 29 & 26 \\\\ 26 & 49 \\end{bmatrix}$$",
     },
-    answer: ["a"],
+    answer: ["b"],
   },
   {
     id: "r1234s5t-u678-9v01-w234-3x4y5z6a7b8c",
