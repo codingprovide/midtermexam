@@ -86,9 +86,9 @@ const examQuestionsList = [
     question:
       "判斷下列矩陣是否為列梯形形式（row-echelon form）。如果是，判斷其是否也是列簡梯形形式（reduced row-echelon form）。$$\\begin{bmatrix} 1 & -9 & 2 & -7 \\\\ 0 & 1 & 0 & -1 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$$",
     option: {
-      a: "列梯形形式",
-      b: "列簡梯形形式",
-      c: "同時是列梯形形式和列簡梯形形式",
+      a: "row-echelon form",
+      b: "reduced row-echelon form",
+      c: "row-echelon form and reduced row-echelon form",
       d: "兩者都不是",
     },
     answer: ["a"],
