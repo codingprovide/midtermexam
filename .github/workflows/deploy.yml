@@ -12,13 +12,13 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3 # Updated version
+        uses: actions/checkout@v3
 
       - name: Install Bun
         run: |
           curl -fsSL https://bun.sh/install | bash
-          echo 'export BUN_INSTALL="$HOME/.bun"' >> $GITHUB_ENV
-          echo 'export PATH="$BUN_INSTALL/bin:$PATH"' >> $GITHUB_ENV
+          echo "BUN_INSTALL=$HOME/.bun" >> $GITHUB_ENV
+          echo "$HOME/.bun/bin" >> $GITHUB_PATH
         shell: bash
 
       - name: Install dependencies with Bun
@@ -28,7 +28,7 @@ jobs:
         run: bun run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v4 # Updated version
+        uses: actions/upload-artifact@v4
         with:
           name: production-files
           path: ./dist
@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4 # Updated version
+        uses: actions/download-artifact@v4
         with:
           name: production-files
           path: ./dist
